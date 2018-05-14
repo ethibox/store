@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+description: A Helm chart for Kubernetes
+icon: https://charts.ethibox.fr/charts/owncloud/icon.png
+name: owncloud
+version: 0.1.0
+appVersion: 9.0
+keywords:
+  - Storage

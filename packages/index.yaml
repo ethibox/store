@@ -1,0 +1,129 @@
+apiVersion: v1
+entries:
+  custom:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-05-14T22:57:53.198921143+02:00
+    description: A Helm chart for Kubernetes
+    digest: 86f72b1c3d6a14eb44c2aa4373a8ae33d4a8689eca99df60038b67a6890ccd55
+    keywords:
+    - Custom
+    name: custom
+    urls:
+    - custom-0.1.0.tgz
+    version: 0.1.0
+  etherpad:
+  - apiVersion: v1
+    created: 2018-05-14T22:57:53.199337093+02:00
+    description: A Helm chart for Kubernetes
+    digest: 13dc1abc7919187c4a87d28e5aec70dfb3076ff6c7c466c4ac5854a8d54f67c7
+    icon: https://charts.ethibox.fr/charts/etherpad/icon.png
+    keywords:
+    - Editor
+    name: etherpad
+    urls:
+    - etherpad-0.1.0.tgz
+    version: 0.1.0
+  ethibox:
+  - apiVersion: v1
+    appVersion: 0.8.4
+    created: 2018-05-14T22:57:53.201200401+02:00
+    description: A Helm chart for Kubernetes
+    digest: 5ee8323d1f7c3abd8158d294a09ce81be30efb520d40dccf6efb9241caf73ced
+    icon: https://charts.ethibox.fr/charts/ethibox/icon.png
+    name: ethibox
+    urls:
+    - ethibox-0.1.0.tgz
+    version: 0.1.0
+  freshrss:
+  - apiVersion: v1
+    appVersion: 1.7.0
+    created: 2018-05-14T22:57:53.201772596+02:00
+    description: A Helm chart for Kubernetes
+    digest: 396f8ec11266cd3aa38d9c3f6a2e66b030602dd3c729238174dda809e2f7c3da
+    icon: https://charts.ethibox.fr/charts/freshrss/icon.png
+    keywords:
+    - RSS
+    name: freshrss
+    urls:
+    - freshrss-0.1.0.tgz
+    version: 0.1.0
+  ghost:
+  - apiVersion: v1
+    appVersion: 1.18.2
+    created: 2018-05-14T22:57:53.202021781+02:00
+    description: A Helm chart for Kubernetes
+    digest: 4634ab1b49af9e04df19fcdde3811c79de315baf3c64ad0712482a83cb0761a3
+    icon: https://charts.ethibox.fr/charts/ghost/icon.png
+    keywords:
+    - Blog
+    name: ghost
+    urls:
+    - ghost-0.1.0.tgz
+    version: 0.1.0
+  mediawiki:
+  - apiVersion: v1
+    appVersion: 1.27.4
+    created: 2018-05-14T22:57:53.203560528+02:00
+    description: A Helm chart for Kubernetes
+    digest: 280ba742bdf402cab1424b49fdcf378ae297640827eb0c4157cbc1c21957607b
+    icon: https://charts.ethibox.fr/charts/mediawiki/icon.png
+    keywords:
+    - Wiki
+    name: mediawiki
+    urls:
+    - mediawiki-0.1.0.tgz
+    version: 0.1.0
+  owncloud:
+  - apiVersion: v1
+    appVersion: "9"
+    created: 2018-05-14T22:57:53.204053674+02:00
+    description: A Helm chart for Kubernetes
+    digest: 4f93f5c9771cc90b4be9cf86b73ff61781cfe81758bbbf26ac141fa9982c4201
+    icon: https://charts.ethibox.fr/charts/owncloud/icon.png
+    keywords:
+    - Storage
+    name: owncloud
+    urls:
+    - owncloud-0.1.0.tgz
+    version: 0.1.0
+  searx:
+  - apiVersion: v1
+    appVersion: 0.13.1
+    created: 2018-05-14T22:57:53.207373911+02:00
+    description: A Helm chart for Kubernetes
+    digest: 1ee841a3bf408fa05b65c22da73b888d1cb76ff96d98eff62e04872a59107c84
+    icon: https://charts.ethibox.fr/charts/searx/icon.png
+    keywords:
+    - Search
+    name: searx
+    urls:
+    - searx-0.1.0.tgz
+    version: 0.1.0
+  wekan:
+  - apiVersion: v1
+    appVersion: v0.63
+    created: 2018-05-14T22:57:53.207822904+02:00
+    description: A Helm chart for Kubernetes
+    digest: 46c5de1119af97d13eafca13ab2c4399af35a99ff678d9f561815f46072a572e
+    icon: https://charts.ethibox.fr/charts/wekan/icon.png
+    keywords:
+    - Project-Management
+    name: wekan
+    urls:
+    - wekan-0.1.0.tgz
+    version: 0.1.0
+  wordpress:
+  - apiVersion: v1
+    appVersion: 4.9.1
+    created: 2018-05-14T22:57:53.208321191+02:00
+    description: A Helm chart for Kubernetes
+    digest: efb2eac3bc2a494633ff5fdceb27834db22dadcc8a03b0688f95a86a647abe43
+    icon: https://charts.ethibox.fr/charts/wordpress/icon.png
+    keywords:
+    - Blog
+    name: wordpress
+    urls:
+    - wordpress-0.1.0.tgz
+    version: 0.1.0
+generated: 2018-05-14T22:57:53.198061155+02:00
