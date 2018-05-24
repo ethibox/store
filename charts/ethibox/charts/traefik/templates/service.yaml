@@ -12,8 +12,8 @@ metadata:
     {{ $key }}: {{ $value | quote }}
   {{- end }}
   {{- end }}
+  {{- if .Values.service.annotations }}
   annotations:
-  {{- if .Values.service }}
   {{- range $key, $value := .Values.service.annotations }}
     {{ $key }}: {{ $value | quote }}
   {{- end }}

@@ -3,7 +3,7 @@ entries:
   custom:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-05-24T16:55:14.640973228+02:00
+    created: 2018-05-24T19:23:11.418422245+02:00
     description: A Helm chart for Kubernetes
     digest: 86f72b1c3d6a14eb44c2aa4373a8ae33d4a8689eca99df60038b67a6890ccd55
     keywords:
@@ -14,7 +14,7 @@ entries:
     version: 0.1.0
   etherpad:
   - apiVersion: v1
-    created: 2018-05-24T16:55:14.641351277+02:00
+    created: 2018-05-24T19:23:11.418793713+02:00
     description: A Helm chart for Kubernetes
     digest: 13dc1abc7919187c4a87d28e5aec70dfb3076ff6c7c466c4ac5854a8d54f67c7
     icon: https://charts.ethibox.fr/charts/etherpad/icon.png
@@ -27,9 +27,9 @@ entries:
   ethibox:
   - apiVersion: v1
     appVersion: 0.8.5
-    created: 2018-05-24T16:55:14.64299419+02:00
+    created: 2018-05-24T19:23:11.420483161+02:00
     description: A Helm chart for Kubernetes
-    digest: 48ee90a05e95582b806aee63c7d23ed15a111763adabf42c9f358c6d6b6f2a6e
+    digest: aeb558e8041b5f9cfcae436a2f9c07f488b2be24b62b9e46787b2b763042d517
     icon: https://charts.ethibox.fr/charts/ethibox/icon.png
     name: ethibox
     urls:
@@ -38,7 +38,7 @@ entries:
   freshrss:
   - apiVersion: v1
     appVersion: 1.7.0
-    created: 2018-05-24T16:55:14.643459677+02:00
+    created: 2018-05-24T19:23:11.42091635+02:00
     description: A Helm chart for Kubernetes
     digest: 396f8ec11266cd3aa38d9c3f6a2e66b030602dd3c729238174dda809e2f7c3da
     icon: https://charts.ethibox.fr/charts/freshrss/icon.png
@@ -51,7 +51,7 @@ entries:
   ghost:
   - apiVersion: v1
     appVersion: 1.18.2
-    created: 2018-05-24T16:55:14.64370453+02:00
+    created: 2018-05-24T19:23:11.421159967+02:00
     description: A Helm chart for Kubernetes
     digest: 4634ab1b49af9e04df19fcdde3811c79de315baf3c64ad0712482a83cb0761a3
     icon: https://charts.ethibox.fr/charts/ghost/icon.png
@@ -64,7 +64,7 @@ entries:
   invoiceninja:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-05-24T16:55:14.644283865+02:00
+    created: 2018-05-24T19:23:11.421723718+02:00
     description: A Helm chart for Kubernetes
     digest: 1df0c75cedc06fbc9f564ce826e6ba8dc0c0488c2baf6bcf9abb02f808fecbe5
     icon: https://charts.ethibox.fr/charts/invoiceninja/icon.png
@@ -77,7 +77,7 @@ entries:
   mediawiki:
   - apiVersion: v1
     appVersion: 1.27.4
-    created: 2018-05-24T16:55:14.645598881+02:00
+    created: 2018-05-24T19:23:11.423042611+02:00
     description: A Helm chart for Kubernetes
     digest: 280ba742bdf402cab1424b49fdcf378ae297640827eb0c4157cbc1c21957607b
     icon: https://charts.ethibox.fr/charts/mediawiki/icon.png
@@ -90,7 +90,7 @@ entries:
   owncloud:
   - apiVersion: v1
     appVersion: "9"
-    created: 2018-05-24T16:55:14.646057011+02:00
+    created: 2018-05-24T19:23:11.423504693+02:00
     description: A Helm chart for Kubernetes
     digest: 4f93f5c9771cc90b4be9cf86b73ff61781cfe81758bbbf26ac141fa9982c4201
     icon: https://charts.ethibox.fr/charts/owncloud/icon.png
@@ -103,7 +103,7 @@ entries:
   searx:
   - apiVersion: v1
     appVersion: 0.13.1
-    created: 2018-05-24T16:55:14.649151235+02:00
+    created: 2018-05-24T19:23:11.426594704+02:00
     description: A Helm chart for Kubernetes
     digest: 1ee841a3bf408fa05b65c22da73b888d1cb76ff96d98eff62e04872a59107c84
     icon: https://charts.ethibox.fr/charts/searx/icon.png
@@ -116,7 +116,7 @@ entries:
   wekan:
   - apiVersion: v1
     appVersion: v0.63
-    created: 2018-05-24T16:55:14.649524151+02:00
+    created: 2018-05-24T19:23:11.426951319+02:00
     description: A Helm chart for Kubernetes
     digest: 46c5de1119af97d13eafca13ab2c4399af35a99ff678d9f561815f46072a572e
     icon: https://charts.ethibox.fr/charts/wekan/icon.png
@@ -129,7 +129,7 @@ entries:
   wordpress:
   - apiVersion: v1
     appVersion: 4.9.1
-    created: 2018-05-24T16:55:14.649975214+02:00
+    created: 2018-05-24T19:23:11.427401406+02:00
     description: A Helm chart for Kubernetes
     digest: efb2eac3bc2a494633ff5fdceb27834db22dadcc8a03b0688f95a86a647abe43
     icon: https://charts.ethibox.fr/charts/wordpress/icon.png
@@ -139,4 +139,4 @@ entries:
     urls:
     - wordpress-0.1.0.tgz
     version: 0.1.0
-generated: 2018-05-24T16:55:14.640209704+02:00
+generated: 2018-05-24T19:23:11.417666008+02:00
