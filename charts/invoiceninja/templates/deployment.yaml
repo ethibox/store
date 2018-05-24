@@ -1,0 +1,86 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "invoiceninja.fullname" . }}
+  labels:
+    app: {{ template "invoiceninja.name" . }}
+    chart: {{ template "invoiceninja.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "invoiceninja.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "invoiceninja.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      volumes:
+        - name: config
+          configMap:
+            name: {{ template "invoiceninja.fullname" . }}
+        - name: public
+          emptyDir: {}
+      containers:
+        - name: nginx
+          image: nginx:1
+          volumeMounts:
+            - name: config
+              mountPath: /etc/nginx/nginx.conf
+              subPath: nginx.conf
+            - name: public
+              mountPath: /var/www/app/public
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+        - name: {{ .Chart.Name }}
+          volumeMounts:
+            - name: public
+              mountPath: /var/www/app/public
+          env:
+            - name: APP_CIPHER
+              value: AES-256-CBC
+            - name: APP_DEBUG
+              value: "0"
+            - name: APP_KEY
+              value: SomeRandomStringSomeRandomString
+            - name: APP_URL
+              value: http://localhost
+            - name: DB_DATABASE
+              value: ninja
+            - name: DB_HOST
+              value: {{ template "mariadb.fullname" . }}
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "mariadb.fullname" . }}
+                  key: mariadb-root-password
+            - name: PRECONFIGURED_INSTALL
+              value: "true"
+            - name: DB_USERNAME
+              value: root
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 9000
+              protocol: TCP
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
