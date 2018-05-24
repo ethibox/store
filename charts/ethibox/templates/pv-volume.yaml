@@ -8,7 +8,7 @@ metadata:
 spec:
   storageClassName: ethibox
   capacity:
-    storage: 2Gi
+    storage: 3Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
