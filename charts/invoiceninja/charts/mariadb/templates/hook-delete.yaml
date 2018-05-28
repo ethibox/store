@@ -1,0 +1,24 @@
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ template "mariadb.fullname" . }}
+  labels:
+    app: {{ template "mariadb.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+  annotations:
+    "helm.sh/hook": pre-delete
+    "helm.sh/hook-delete-policy": hook-succeeded
+spec:
+  template:
+    metadata:
+      name: {{ template "mariadb.fullname" . }}
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: delete-config
+          image: claranet/gcloud-kubectl-docker:1.0.0
+          imagePullPolicy: Always
+          command: ["kubectl", "delete", "secret", {{ template "mariadb.fullname" . }}]
