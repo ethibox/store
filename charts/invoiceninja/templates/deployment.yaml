@@ -66,6 +66,8 @@ spec:
           {{ if .Values.ingress.enabled }}
             - name: APP_URL
               value: https://{{ index .Values.ingress.hosts 0 }}
+            - name: REQUIRE_HTTPS
+              value: "true"
           {{- else }}
             - name: APP_URL
               value: http://localhost

@@ -64,9 +64,9 @@ entries:
   invoiceninja:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-05-28T19:22:37.203069364+02:00
+    created: 2018-05-28T22:58:41.760136016+02:00
     description: A Helm chart for Kubernetes
-    digest: 9470a9b5aac1b34a74f71bf24fa388e42bb5bc88665296b31e4a4d7fc7127499
+    digest: 159feedffebbbdcd889004eb8f1229589af7e1c1fe5a372b5ae7b90149508e60
     icon: https://charts.ethibox.fr/charts/invoiceninja/icon.png
     keywords:
     - Invoicing
@@ -139,4 +139,4 @@ entries:
     urls:
     - wordpress-0.1.0.tgz
     version: 0.1.0
-generated: 2018-05-28T19:22:37.198413325+02:00
+generated: 2018-05-28T22:58:41.755742651+02:00
