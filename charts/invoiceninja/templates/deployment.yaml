@@ -25,6 +25,18 @@ spec:
             name: {{ template "invoiceninja.fullname" . }}
         - name: public
           emptyDir: {}
+        - name: invoiceninja-storage
+          persistentVolumeClaim:
+            claimName: {{ template "invoiceninja.fullname" . }}
+      initContainers:
+        - name: volume-mount-hack
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          command: ["sh", "-c", "chown -R www-data:www-data /var/www/app/storage"]
+          volumeMounts:
+            - name: invoiceninja-storage
+              mountPath: /var/www/app/storage
+              securityContext:
+                runAsUser: 0
       containers:
         - name: nginx
           image: nginx:1
@@ -42,6 +54,8 @@ spec:
           volumeMounts:
             - name: public
               mountPath: /var/www/app/public
+            - name: invoiceninja-storage
+              mountPath: /var/www/app/storage
           env:
             - name: APP_CIPHER
               value: AES-256-CBC
@@ -49,8 +63,13 @@ spec:
               value: "0"
             - name: APP_KEY
               value: SomeRandomStringSomeRandomString
+          {{ if .Values.ingress.enabled }}
+            - name: APP_URL
+              value: https://{{ index .Values.ingress.hosts 0 }}
+          {{- else }}
             - name: APP_URL
               value: http://localhost
+          {{- end }}
             - name: DB_DATABASE
               value: ninja
             - name: DB_HOST
