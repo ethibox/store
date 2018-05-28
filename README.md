@@ -31,6 +31,14 @@ Helm Charts
 * [ ] Matterwiki
 * [ ] NextCloud
 * [ ] ruTorrent
+* [ ] Diaspora
+* [ ] Mailpile
+* [ ] Cozy Cloud
+* [ ] Wallabag
+* [ ] Sentry
+* [ ] Gogs
+* [ ] Dolibarr
+* [ ] Gitlab
 
 ## Build packages
 
