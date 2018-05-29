@@ -2,6 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: {{ template "traefik.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     app: {{ template "traefik.name" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
@@ -126,8 +127,14 @@ spec:
       {{- if .Values.acme.enabled }}
       - name: acme
       {{- if .Values.acme.persistence.enabled }}
-        persistentVolumeClaim:
-          claimName: {{ .Values.acme.persistence.existingClaim | default (printf "%s-acme" (include "traefik.fullname" .)) }}
+        {{ if .Values.acme.persistence.existingClaim }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.acme.persistence.existingClaim }}
+        {{- else }}
+          hostPath:
+            path: /opt/ethibox/{{ template "traefik.fullname" . }}/
+            type: DirectoryOrCreate
+        {{ end }}
       {{- else }}
         emptyDir: {}
       {{- end }}

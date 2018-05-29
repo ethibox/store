@@ -1,8 +1,10 @@
 ---
 dependencies:
   - name: swift
-    version: 0.6.2
+    version: 0.8.1
     repository: https://kubernetes-charts.storage.googleapis.com/
+    condition: swift.enabled
   - name: traefik
     version: 1.24.1
     repository: file://charts/traefik/
+    condition: traefik.enabled

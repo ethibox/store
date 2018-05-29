@@ -9,6 +9,7 @@ service:
 ingress:
   enabled: false
 traefik:
+  enabled: true
   imageTag: 1.5.4
   serviceType: NodePort
   ssl:
