@@ -9,4 +9,4 @@ service:
   externalPort: 3306
 persistence:
   enabled: true
-  directory: /data/helm/
+  directory: /data/helm

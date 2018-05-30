@@ -32,7 +32,7 @@ spec:
       {{- else }}
         - name: invoiceninja-storage
           hostPath:
-            path: {{ .Values.persistence.directory }}{{ template "invoiceninja.fullname" . }}
+            path: {{ .Values.persistence.directory }}/{{ .Release.Name }}/{{ template "invoiceninja.fullname" . }}
             type: DirectoryOrCreate
       {{ end }}
       {{ if .Release.IsInstall }}

@@ -19,7 +19,7 @@ spec:
       volumes:
         - name: mariadb-storage
           hostPath:
-            path: {{ .Values.persistence.directory }}{{ template "mariadb.fullname" . }}
+            path: {{ .Values.persistence.directory }}
             type: DirectoryOrCreate
       containers:
         - name: delete-config
@@ -29,7 +29,7 @@ spec:
           lifecycle:
             postStart:
               exec:
-                command: ["sh", "-c", "rm -rf /tmp/*"]
+                command: ["rm", "-rf", {{ printf "/tmp/%s" .Release.Name | quote }}]
           volumeMounts:
             - name: mariadb-storage
               mountPath: "/tmp"

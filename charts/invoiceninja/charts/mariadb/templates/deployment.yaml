@@ -24,7 +24,7 @@ spec:
         {{ else }}
         - name: mariadb-storage
           hostPath:
-            path: {{ .Values.persistence.directory }}{{ template "mariadb.fullname" . }}
+            path: {{ .Values.persistence.directory }}/{{ .Release.Name }}/{{ template "mariadb.fullname" . }}
             type: DirectoryOrCreate
         {{ end }}
       {{ end }}

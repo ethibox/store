@@ -10,4 +10,4 @@ ingress:
   enabled: false
 persistence:
   enabled: true
-  directory: /data/helm/
+  directory: /data/helm
