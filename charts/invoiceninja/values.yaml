@@ -1,16 +1,13 @@
+---
 replicaCount: 1
-
 image:
   repository: invoiceninja/invoiceninja
   tag: 4.4.3
-  pullPolicy: IfNotPresent
-
 service:
   type: NodePort
   port: 80
-
 ingress:
   enabled: false
-
 persistence:
   enabled: true
+  directory: /data/helm/

@@ -15,6 +15,19 @@ spec:
         app: {{ template "mariadb.name" . }}
         release: {{ .Release.Name }}
     spec:
+      {{ if .Values.persistence.enabled }}
+      volumes:
+        {{ if .Values.persistence.existingClaim }}
+        - name: mariadb-storage
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.existingClaim }}
+        {{ else }}
+        - name: mariadb-storage
+          hostPath:
+            path: {{ .Values.persistence.directory }}{{ template "mariadb.fullname" . }}
+            type: DirectoryOrCreate
+        {{ end }}
+      {{ end }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -29,6 +42,11 @@ spec:
                   key: mariadb-root-password
           ports:
             - containerPort: {{ .Values.service.internalPort }}
+          {{- if .Values.persistence.enabled }}
+          volumeMounts:
+            - name: mariadb-storage
+              mountPath: "/var/lib/mysql"
+          {{ end }}
           livenessProbe:
             exec:
               command: ["sh", "-c", "exec mysqladmin status -uroot -p$MYSQL_ROOT_PASSWORD"]

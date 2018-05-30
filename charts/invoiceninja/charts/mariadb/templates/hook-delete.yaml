@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: {{ template "mariadb.fullname" . }}
+  name: {{ template "mariadb.fullname" . }}-job
   labels:
     app: {{ template "mariadb.name" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
@@ -16,8 +16,36 @@ spec:
       name: {{ template "mariadb.fullname" . }}
     spec:
       restartPolicy: Never
+      volumes:
+        - name: mariadb-storage
+          hostPath:
+            path: {{ .Values.persistence.directory }}{{ template "mariadb.fullname" . }}
+            type: DirectoryOrCreate
       containers:
         - name: delete-config
-          image: claranet/gcloud-kubectl-docker:1.0.0
+          image: lachlanevenson/k8s-kubectl:v1.9.8
           imagePullPolicy: Always
           command: ["kubectl", "delete", "secret", {{ template "mariadb.fullname" . }}]
+          lifecycle:
+            postStart:
+              exec:
+                command: ["sh", "-c", "rm -rf /tmp/*"]
+          volumeMounts:
+            - name: mariadb-storage
+              mountPath: "/tmp"
+---
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ template "mariadb.fullname" . }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: default
+  - kind: ServiceAccount
+    name: default
+    namespace: kube-system
