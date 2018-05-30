@@ -7,3 +7,6 @@ service:
   type: ClusterIP
   internalPort: 3306
   externalPort: 3306
+persistence:
+  enabled: true
+  directory: /data/helm

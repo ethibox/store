@@ -25,9 +25,17 @@ spec:
             name: {{ template "invoiceninja.fullname" . }}
         - name: public
           emptyDir: {}
+      {{ if .Values.persistence.existingClaim }}
         - name: invoiceninja-storage
           persistentVolumeClaim:
-            claimName: {{ template "invoiceninja.fullname" . }}
+            claimName: {{ .Values.persistence.existingClaim }}
+      {{- else }}
+        - name: invoiceninja-storage
+          hostPath:
+            path: {{ .Values.persistence.directory }}/{{ .Release.Name }}/{{ template "invoiceninja.fullname" . }}
+            type: DirectoryOrCreate
+      {{ end }}
+      {{ if .Release.IsInstall }}
       initContainers:
         - name: volume-mount-hack
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -37,6 +45,7 @@ spec:
               mountPath: /var/www/app/storage
               securityContext:
                 runAsUser: 0
+      {{ end }}
       containers:
         - name: nginx
           image: nginx:1
