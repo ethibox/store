@@ -39,6 +39,9 @@ Helm Charts
 * [ ] Gogs
 * [ ] Dolibarr
 * [ ] Gitlab
+* [ ] Jenkins
+* [ ] Joomla
+* [ ] Magento
 
 ## Build packages
 
