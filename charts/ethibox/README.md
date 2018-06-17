@@ -41,12 +41,17 @@ helm delete --purge my-release
 
 The following table lists the configurable parameters of the Ethibox chart and their default values.
 
-| Parameter               | Description                                  | Default         |
-|-------------------------|----------------------------------------------|-----------------|
-| `hostname`              | Hostname to your Ethibox instance            | `ethibox.local` |
-| `port`                  | External port                                | `4444`          |
-| `traefik.enabled`       | Enable reverse-proxy                         | `true`          |
-| `traefik.acme.enabled`  | Enable let's encrypt to obtain certificates  | `false`         |
+| Parameter               | Description                                         | Default               |
+|-------------------------|-----------------------------------------------------|-----------------------|
+| `ingress.enabled`       | Enable ingress controller resource                  | `true`                |
+| `ingress.hosts[0]`      | Hostname to your Ethibox instance                   | `ethibox.local`       |
+| `persistence.enabled`   | Create a volume to store ethibox database           | `true`                |
+| `traefik.enabled`       | Enable reverse-proxy                                | `true`                |
+| `traefik.acme.enabled`  | Enable let's encrypt to obtain certificates         | `false`               |
+| `traefik.acme.staging`  | Get certs from Let's Encrypt's staging environment  | `true`                |
+| `traefik.acme.email`    | Whether to redirect HTTP requests to HTTPS          | `contact@example.com` |
+| `traefik.ssl.enabled`   | Whether to enable HTTPS                             | `false`               |
+| `traefik.ssl.enforced`  | Whether to redirect HTTP requests to HTTPS          | `false`               |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example:
 

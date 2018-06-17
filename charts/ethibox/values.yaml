@@ -8,6 +8,8 @@ service:
   port: 4444
 ingress:
   enabled: true
+  hosts:
+    - ethibox.local
 traefik:
   enabled: true
   imageTag: 1.5.4
