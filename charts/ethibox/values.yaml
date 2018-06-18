@@ -2,13 +2,16 @@
 replicaCount: 1
 image:
   repository: ston3o/ethibox
-  tag: 0.8.5
+  tag: 0.9.1
 service:
   type: NodePort
   port: 4444
 ingress:
-  enabled: false
+  enabled: true
+  hosts:
+    - ethibox.local
 traefik:
+  enabled: true
   imageTag: 1.5.4
   serviceType: NodePort
   ssl:
