@@ -127,14 +127,9 @@ spec:
       {{- if .Values.acme.enabled }}
       - name: acme
       {{- if .Values.acme.persistence.enabled }}
-        {{ if .Values.acme.persistence.existingClaim }}
-          persistentVolumeClaim:
-            claimName: {{ .Values.acme.persistence.existingClaim }}
-        {{- else }}
-          hostPath:
-            path: /opt/ethibox/{{ template "traefik.fullname" . }}/
-            type: DirectoryOrCreate
-        {{ end }}
+        hostPath:
+          path: /opt/ethibox/{{ template "traefik.fullname" . }}/
+          type: DirectoryOrCreate
       {{- else }}
         emptyDir: {}
       {{- end }}

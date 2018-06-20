@@ -42,6 +42,8 @@ Helm Charts
 * [ ] Jenkins
 * [ ] Joomla
 * [ ] Magento
+* [ ] PeerTube
+* [ ] WooCommerce
 
 ## Build packages
 
