@@ -44,6 +44,23 @@ Helm Charts
 * [ ] Magento
 * [ ] PeerTube
 * [ ] WooCommerce
+* [ ] Zabbix
+* [ ] Roundcube
+* [ ] Jenkins
+* [ ] Minecraft
+* [ ] Metabase
+* [ ] Odoo
+* [ ] Redmine
+* [ ] Contao
+* [ ] Mattermost
+* [ ] Let's Chat
+* [ ] Draw.io
+* [ ] Standard Notes
+* [ ] KeeWeb
+* [ ] Grafana
+* [ ] Phabricator
+* [ ] OpenProject
+* [ ] Tuleap
 
 ## Build packages
 
