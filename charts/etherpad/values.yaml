@@ -1,12 +1,21 @@
----
 replicaCount: 1
+
 image:
   repository: fuerst/etherpad-docker
   tag: stable
+
 service:
-  name: etherpad
   type: NodePort
-  externalPort: 9001
-  internalPort: 9001
+  port: 9001
+
 ingress:
   enabled: false
+  hosts:
+    - etherpad.local
+
+persistence:
+  enabled: false
+  accessMode: ReadWriteOnce
+  size: 2Gi
+  # existingClaim: your-claim
+  # storageClassName: "-"

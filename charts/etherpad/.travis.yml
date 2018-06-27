@@ -1,0 +1,23 @@
+---
+dist: trusty
+language: C
+sudo: true
+before_install:
+  - wget https://kubernetes-helm.storage.googleapis.com/helm-v2.7.2-linux-amd64.tar.gz
+  - tar xzvf helm-v2.7.2-linux-amd64.tar.gz
+  - sudo mv linux-amd64/helm /usr/local/bin/helm
+  - sudo chmod +x /usr/local/bin/helm
+  - wget https://github.com/garethr/kubeval/releases/download/0.7.0/kubeval-linux-amd64.tar.gz
+  - tar xzvf kubeval-linux-amd64.tar.gz
+  - sudo mv kubeval /usr/local/bin/kubeval
+  - sudo chmod +x /usr/local/bin/kubeval
+  - wget https://github.com/garethr/kubetest/releases/download/0.1.0/kubetest-linux-amd64.tar.gz
+  - tar xzvf kubetest-linux-amd64.tar.gz
+  - sudo mv kubetest /usr/local/bin/kubetest
+  - sudo chmod +x /usr/local/bin/kubetest
+script:
+  - make test
+cache: false
+branches:
+  only:
+    - master
