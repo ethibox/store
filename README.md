@@ -1,4 +1,4 @@
-Helm Charts
+Ethibox Store
 ===
 
 [![](https://img.shields.io/badge/license-GPL%20v3%2B-yellow.svg?style=flat-square&colorA=0d7377&colorB=44c2c7)](https://raw.githubusercontent.com/ston3o/charts/master/LICENSE.txt)
@@ -61,24 +61,20 @@ Helm Charts
 * [ ] Phabricator
 * [ ] OpenProject
 * [ ] Tuleap
-
-## Build packages
-
-```bash
-make build
-```
-
-## Serve packages
-
-```bash
-make serve
-```
-
-## Running the tests
-
-```bash
-make test
-```
+* [ ] Lamp
+* [ ] Lemp
+* [ ] Mean
+* [ ] Mern
+* [ ] Ran
+* [ ] phpMyAdmin
+* [ ] Riot
+* [ ] Zammad
+* [ ] Thelounge
+* [ ] Cocolabs
+* [ ] Pixelfed
+* [ ] CodiMD
+* [ ] Openbook
+* [ ] Streisand
 
 ## Support
 
