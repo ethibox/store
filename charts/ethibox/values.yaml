@@ -1,35 +1,21 @@
----
 replicaCount: 1
+
 image:
   repository: ston3o/ethibox
   tag: 0.9.1
+
 service:
   type: NodePort
   port: 4444
+
 ingress:
-  enabled: true
+  enabled: false
   hosts:
     - ethibox.local
-traefik:
-  enabled: true
-  imageTag: 1.5.4
-  serviceType: NodePort
-  ssl:
-    enabled: false
-    enforced: false
-  acme:
-    enabled: false
-    email: contact@example.com
-    challengeType: http-01
-    staging: true
-    logging: true
-    persistence:
-      enabled: true
-  rbac:
-    enabled: false
+
 persistence:
   enabled: false
   accessMode: ReadWriteOnce
   size: 2Gi
-  # existingClaim: your-claim
-  # storageClassName: "-"
+  existingClaim: ""
+  storageClassName: ""

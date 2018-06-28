@@ -23,7 +23,7 @@ spec:
       hostNetwork: true
       {{- if .Values.persistence.enabled }}
       volumes:
-        - name: ethibox-storage
+        - name: ethibox-data
           persistentVolumeClaim:
             claimName: {{ .Values.persistence.existingClaim | default (include "ethibox.fullname" .) }}
       {{ end }}
@@ -34,13 +34,19 @@ spec:
           env:
             - name: SECRET
               value: {{ randAlphaNum 10 | b64enc | quote }}
+            - name: PERSISTENCE_STORAGECLASSNAME
+              value: "{{ .Values.persistence.storageClassName }}"
+            - name: PERSISTENCE_ENABLED
+              value: "{{ .Values.persistence.enabled }}"
+            - name: PERSISTENCE_EXISTINGCLAIM
+              value: "{{ .Values.persistence.existingClaim }}"
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
           {{- if .Values.persistence.enabled }}
           volumeMounts:
-            - name: ethibox-storage
+            - name: ethibox-data
               mountPath: "/root/.ethibox"
           {{ end }}
           resources:

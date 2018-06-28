@@ -15,10 +15,6 @@ spec:
     requests:
       storage: {{ .Values.persistence.size | quote }}
 {{- if .Values.persistence.storageClassName }}
-{{- if (eq "-" .Values.persistence.storageClassName) }}
-  storageClassName: ""
-{{- else }}
   storageClassName: "{{ .Values.persistence.storageClassName }}"
-{{- end }}
 {{- end }}
 {{- end -}}
