@@ -1,0 +1,74 @@
+[
+    {
+        "name": "wordpress",
+        "icon": "https://store.ethibox.io/charts/wordpress/icon.png",
+        "category": "Blog",
+        "stackFileUrl": "https://store.ethibox.io/packages/wordpress-0.1.0.tgz",
+        "orchestrator": "kubernetes",
+        "enabled": "true"
+    },
+    {
+        "name": "freshrss",
+        "icon": "https://store.ethibox.io/charts/freshrss/icon.png",
+        "category": "RSS",
+        "stackFileUrl": "https://store.ethibox.io/packages/freshrss-0.1.0.tgz",
+        "orchestrator": "kubernetes",
+        "enabled": "true"
+    },
+    {
+        "name": "ghost",
+        "icon": "https://store.ethibox.io/charts/ghost/icon.png",
+        "category": "Blog",
+        "stackFileUrl": "https://store.ethibox.io/packages/ghost-0.1.0.tgz",
+        "orchestrator": "kubernetes",
+        "enabled": "true"
+    },
+    {
+        "name": "invoiceninja",
+        "icon": "https://store.ethibox.io/charts/invoiceninja/icon.png",
+        "category": "Invoicing",
+        "stackFileUrl": "https://store.ethibox.io/packages/invoiceninja-0.1.0.tgz",
+        "orchestrator": "kubernetes",
+        "enabled": "true"
+    },
+    {
+        "name": "mediawiki",
+        "icon": "https://store.ethibox.io/charts/wordpress/icon.png",
+        "category": "Wiki",
+        "stackFileUrl": "https://store.ethibox.io/packages/mediawiki-0.1.0.tgz",
+        "orchestrator": "kubernetes",
+        "enabled": "true"
+    },
+    {
+        "name": "owncloud",
+        "icon": "https://store.ethibox.io/charts/owncloud/icon.png",
+        "category": "Storage",
+        "stackFileUrl": "https://store.ethibox.io/packages/owncloud-0.1.0.tgz",
+        "orchestrator": "kubernetes",
+        "enabled": "true"
+    },
+    {
+        "name": "searx",
+        "icon": "https://store.ethibox.io/charts/searx/icon.png",
+        "category": "Search",
+        "stackFileUrl": "https://store.ethibox.io/packages/searx-0.1.0.tgz",
+        "orchestrator": "kubernetes",
+        "enabled": "true"
+    },
+    {
+        "name": "wekan",
+        "icon": "https://store.ethibox.io/charts/wekan/icon.png",
+        "category": "Project-Management",
+        "stackFileUrl": "https://store.ethibox.io/packages/wekan-0.1.0.tgz",
+        "orchestrator": "kubernetes",
+        "enabled": "true"
+    },
+    {
+        "name": "etherpad",
+        "icon": "https://store.ethibox.io/charts/etherpad/icon.png",
+        "category": "Editor",
+        "stackFileUrl": "https://store.ethibox.io/packages/etherpad-0.1.0.tgz",
+        "orchestrator": "kubernetes",
+        "enabled": "true"
+    }
+]
