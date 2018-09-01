@@ -15,9 +15,10 @@ entries:
     version: 0.1.0
   etherpad:
   - apiVersion: v1
-    created: 2018-05-30T20:27:32.765167186+02:00
+    appVersion: stable
+    created: 2018-06-27T19:46:54.147479194+02:00
     description: A Helm chart for Kubernetes
-    digest: 13dc1abc7919187c4a87d28e5aec70dfb3076ff6c7c466c4ac5854a8d54f67c7
+    digest: cb602a5ccbb4fded118d1603286419243aa797f8f06ccdac3403ccc7941d41cf
     icon: https://charts.ethibox.fr/charts/etherpad/icon.png
     keywords:
     - Editor
@@ -140,4 +141,4 @@ entries:
     urls:
     - wordpress-0.1.0.tgz
     version: 0.1.0
-generated: 2018-06-20T23:22:11.578647329+02:00
+generated: 2018-06-27T19:46:54.145728911+02:00
