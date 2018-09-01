@@ -1,11 +1,11 @@
 # Ethibox
 
-[Ethibox](https://ethibox.fr/) - Host your websites effortlessly.
+[Ethibox](https://ethibox.io/) - Host your websites effortlessly.
 
 ## TL;DR;
 
 ```bash
-helm install --namespace ethibox-system https://charts.ethibox.fr/packages/ethibox-0.1.0.tgz
+helm install --namespace ethibox-system https://store.ethibox.io/packages/ethibox-0.1.0.tgz
 ```
 
 ## Prerequisites
@@ -18,7 +18,7 @@ helm install --namespace ethibox-system https://charts.ethibox.fr/packages/ethib
 To install the chart with the release name `my-release`:
 
 ```bash
-helm install --namespace ethibox-system https://charts.ethibox.fr/packages/ethibox-0.1.0.tgz
+helm install --namespace ethibox-system https://store.ethibox.io/packages/ethibox-0.1.0.tgz
 ```
 
 ## Upgrading the chart
@@ -26,7 +26,7 @@ helm install --namespace ethibox-system https://charts.ethibox.fr/packages/ethib
 To upgrade the release `my-release`:
 
 ```bash
-helm upgrade my-release --reuse-values --set image.tag=0.8.5 https://charts.ethibox.fr/packages/ethibox-0.1.0.tgz
+helm upgrade my-release --reuse-values --set image.tag=0.8.5 https://store.ethibox.io/packages/ethibox-0.1.0.tgz
 ```
 
 ## Uninstalling the Chart
@@ -46,23 +46,17 @@ The following table lists the configurable parameters of the Ethibox chart and t
 | `ingress.enabled`       | Enable ingress controller resource                  | `true`                |
 | `ingress.hosts[0]`      | Hostname to your Ethibox instance                   | `ethibox.local`       |
 | `persistence.enabled`   | Create a volume to store ethibox database           | `true`                |
-| `traefik.enabled`       | Enable reverse-proxy                                | `true`                |
-| `traefik.acme.enabled`  | Enable let's encrypt to obtain certificates         | `false`               |
-| `traefik.acme.staging`  | Get certs from Let's Encrypt's staging environment  | `true`                |
-| `traefik.acme.email`    | Whether to redirect HTTP requests to HTTPS          | `contact@example.com` |
-| `traefik.ssl.enabled`   | Whether to enable HTTPS                             | `false`               |
-| `traefik.ssl.enforced`  | Whether to redirect HTTP requests to HTTPS          | `false`               |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example:
 
 ```bash
-helm install --name my-release --set service.port=4444,persistence.enable=true https://charts.ethibox.fr/packages/ethibox-0.1.0.tgz
+helm install --name my-release --set service.port=4444,persistence.enable=true https://store.ethibox.io/packages/ethibox-0.1.0.tgz
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart. For example:
 
 ```bash
-helm install --name my-release -f values.yaml https://charts.ethibox.fr/packages/ethibox-0.1.0.tgz
+helm install --name my-release -f values.yaml https://store.ethibox.io/packages/ethibox-0.1.0.tgz
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)

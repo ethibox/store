@@ -2,7 +2,6 @@ apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: {{ template "ethibox.fullname" . }}
-  namespace: {{ .Release.Namespace }}
   labels:
     app: {{ template "ethibox.name" . }}
     chart: {{ template "ethibox.chart" . }}
@@ -20,19 +19,11 @@ spec:
         app: {{ template "ethibox.name" . }}
         release: {{ .Release.Name }}
     spec:
-      hostNetwork: true
       {{- if .Values.persistence.enabled }}
       volumes:
-        {{ if .Values.persistence.existingClaim }}
-        - name: ethibox-storage
+        - name: ethibox-data
           persistentVolumeClaim:
-            claimName: {{ .Values.persistence.existingClaim }}
-        {{- else }}
-        - name: ethibox-storage
-          hostPath:
-            path: /opt/ethibox/{{ template "ethibox.fullname" . }}/
-            type: DirectoryOrCreate
-        {{ end }}
+            claimName: {{ .Values.persistence.existingClaim | default (include "ethibox.fullname" .) }}
       {{ end }}
       containers:
         - name: {{ .Chart.Name }}
@@ -47,8 +38,9 @@ spec:
               protocol: TCP
           {{- if .Values.persistence.enabled }}
           volumeMounts:
-            - name: ethibox-storage
-              mountPath: "/root/.ethibox"
+            - name: ethibox-data
+              mountPath: /app/data
+              subPath: data
           {{ end }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}

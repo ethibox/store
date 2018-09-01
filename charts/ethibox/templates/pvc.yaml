@@ -1,0 +1,21 @@
+{{- if and .Values.persistence.enabled (not .Values.persistence.existingClaim) }}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ template "ethibox.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ template "ethibox.name" . }}
+    chart: {{ template "ethibox.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  accessModes:
+    - {{ .Values.persistence.accessMode | quote }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.size | quote }}
+{{- if .Values.persistence.storageClassName }}
+  storageClassName: "{{ .Values.persistence.storageClassName }}"
+{{- end }}
+{{- end -}}

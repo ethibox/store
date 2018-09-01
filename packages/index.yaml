@@ -27,11 +27,10 @@ entries:
     version: 0.1.0
   ethibox:
   - apiVersion: v1
-    appVersion: 0.9.1
-    created: 2018-06-20T23:22:11.581500278+02:00
+    appVersion: "1.0"
+    created: 2018-09-01T17:59:02.844118634+02:00
     description: A Helm chart for Kubernetes
-    digest: 04a23094c93ea10545be7c26570274cb684927dda0355160d8e99d5b93f3e318
-    icon: https://charts.ethibox.fr/charts/ethibox/icon.png
+    digest: e03717ca7bda447ba8b3ede5b768db389bff1748e7621bee737c3ea1d8fbf186
     name: ethibox
     urls:
     - ethibox-0.1.0.tgz
@@ -140,4 +139,4 @@ entries:
     urls:
     - wordpress-0.1.0.tgz
     version: 0.1.0
-generated: 2018-06-20T23:22:11.578647329+02:00
+generated: 2018-09-01T17:59:02.842176741+02:00
