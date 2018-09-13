@@ -29,11 +29,11 @@ Ethibox Store
 * [ ] OnlyOffice
 * [ ] Jitsi Meet
 * [ ] Matterwiki
-* [ ] NextCloud
+* [ ] Nextcloud
 * [ ] ruTorrent
 * [ ] Diaspora
 * [ ] Mailpile
-* [ ] Cozy Cloud
+* [ ] Cozy
 * [ ] Wallabag
 * [ ] Sentry
 * [ ] Gogs
@@ -69,12 +69,14 @@ Ethibox Store
 * [ ] phpMyAdmin
 * [ ] Riot
 * [ ] Zammad
-* [ ] Thelounge
-* [ ] Cocolabs
+* [ ] The Lounge
+* [ ] Cocorico
 * [ ] Pixelfed
 * [ ] CodiMD
 * [ ] Openbook
 * [ ] Streisand
+* [ ] HumHub
+* [ ] Reaction
 
 ## Support
 
