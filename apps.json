@@ -1,345 +1,345 @@
 [
     {
         "name": "wordpress",
-        "icon": "https://store.ethibox.io/charts/wordpress/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/wordpress/icon.png",
         "category": "Blog",
-        "stackFileUrl": "https://store.ethibox.io/packages/wordpress-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/wordpress-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "true"
     },
     {
         "name": "etherpad",
-        "icon": "https://store.ethibox.io/charts/etherpad/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/etherpad/icon.png",
         "category": "Editor",
-        "stackFileUrl": "https://store.ethibox.io/packages/etherpad-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/etherpad-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "true"
     },
     {
         "name": "freshrss",
-        "icon": "https://store.ethibox.io/charts/freshrss/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/freshrss/icon.png",
         "category": "RSS",
-        "stackFileUrl": "https://store.ethibox.io/packages/freshrss-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/freshrss-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "true"
     },
     {
         "name": "ghost",
-        "icon": "https://store.ethibox.io/charts/ghost/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/ghost/icon.png",
         "category": "Blog",
-        "stackFileUrl": "https://store.ethibox.io/packages/ghost-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/ghost-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "true"
     },
     {
         "name": "invoiceninja",
-        "icon": "https://store.ethibox.io/charts/invoiceninja/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/invoiceninja/icon.png",
         "category": "Invoicing",
-        "stackFileUrl": "https://store.ethibox.io/packages/invoiceninja-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/invoiceninja-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "true"
     },
     {
         "name": "mediawiki",
-        "icon": "https://store.ethibox.io/charts/mediawiki/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/mediawiki/icon.png",
         "category": "Wiki",
-        "stackFileUrl": "https://store.ethibox.io/packages/mediawiki-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/mediawiki-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "true"
     },
     {
         "name": "owncloud",
-        "icon": "https://store.ethibox.io/charts/owncloud/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/owncloud/icon.png",
         "category": "Storage",
-        "stackFileUrl": "https://store.ethibox.io/packages/owncloud-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/owncloud-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "true"
     },
     {
         "name": "searx",
-        "icon": "https://store.ethibox.io/charts/searx/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/searx/icon.png",
         "category": "Search",
-        "stackFileUrl": "https://store.ethibox.io/packages/searx-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/searx-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "true"
     },
     {
         "name": "wekan",
-        "icon": "https://store.ethibox.io/charts/wekan/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/wekan/icon.png",
         "category": "Project-Management",
-        "stackFileUrl": "https://store.ethibox.io/packages/wekan-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/wekan-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "true"
     },
     {
         "name": "jitsi meet",
-        "icon": "https://store.ethibox.io/charts/jitsi-meet/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/jitsi-meet/icon.png",
         "category": "Chat",
-        "stackFileUrl": "https://store.ethibox.io/packages/jitsi-meet-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/jitsi-meet-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "odoo",
-        "icon": "https://store.ethibox.io/charts/odoo/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/odoo/icon.png",
         "category": "ERP",
-        "stackFileUrl": "https://store.ethibox.io/packages/odoo-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/odoo-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "wallabag",
-        "icon": "https://store.ethibox.io/charts/wallabag/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/wallabag/icon.png",
         "category": "Bookmarks",
-        "stackFileUrl": "https://store.ethibox.io/packages/wallabag-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/wallabag-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Gogs",
-        "icon": "https://store.ethibox.io/charts/gogs/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/gogs/icon.png",
         "category": "Git",
-        "stackFileUrl": "https://store.ethibox.io/packages/gogs-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/gogs-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Nextcloud",
-        "icon": "https://store.ethibox.io/charts/nextcloud/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/nextcloud/icon.png",
         "category": "Storage",
-        "stackFileUrl": "https://store.ethibox.io/packages/nextcloud-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/nextcloud-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "mastodon",
-        "icon": "https://store.ethibox.io/charts/mastodon/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/mastodon/icon.png",
         "category": "Social network",
-        "stackFileUrl": "https://store.ethibox.io/packages/mastodon-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/mastodon-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Prestashop",
-        "icon": "https://store.ethibox.io/charts/prestashop/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/prestashop/icon.png",
         "category": "E-Commerce",
-        "stackFileUrl": "https://store.ethibox.io/packages/prestashop-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/prestashop-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Discourse",
-        "icon": "https://store.ethibox.io/charts/discourse/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/discourse/icon.png",
         "category": "Forum",
-        "stackFileUrl": "https://store.ethibox.io/packages/discourse-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/discourse-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "ERPNext",
-        "icon": "https://store.ethibox.io/charts/erpnext/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/erpnext/icon.png",
         "category": "ERP",
-        "stackFileUrl": "https://store.ethibox.io/packages/erpnext-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/erpnext-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Dolibarr",
-        "icon": "https://store.ethibox.io/charts/dolibarr/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/dolibarr/icon.png",
         "category": "ERP",
-        "stackFileUrl": "https://store.ethibox.io/packages/dolibarr-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/dolibarr-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Rocket.Chat",
-        "icon": "https://store.ethibox.io/charts/rocket-chat/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/rocket-chat/icon.png",
         "category": "Chat",
-        "stackFileUrl": "https://store.ethibox.io/packages/rocket-chat-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/rocket-chat-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Mattermost",
-        "icon": "https://store.ethibox.io/charts/mattermost/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/mattermost/icon.png",
         "category": "Chat",
-        "stackFileUrl": "https://store.ethibox.io/packages/mattermost-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/mattermost-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Matterwiki",
-        "icon": "https://store.ethibox.io/charts/matterwiki/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/matterwiki/icon.png",
         "category": "Wiki",
-        "stackFileUrl": "https://store.ethibox.io/packages/matterwiki-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/matterwiki-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Matomo",
-        "icon": "https://store.ethibox.io/charts/matomo/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/matomo/icon.png",
         "category": "Analytics",
-        "stackFileUrl": "https://store.ethibox.io/packages/matomo-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/matomo-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Openbook",
-        "icon": "https://store.ethibox.io/charts/openbook/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/openbook/icon.png",
         "category": "Social network",
-        "stackFileUrl": "https://store.ethibox.io/packages/openbook-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/openbook-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Jenkins",
-        "icon": "https://store.ethibox.io/charts/jenkins/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/jenkins/icon.png",
         "category": "Continuous Integration",
-        "stackFileUrl": "https://store.ethibox.io/packages/jenkins-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/jenkins-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Tiny Tiny RSS",
-        "icon": "https://store.ethibox.io/charts/tiny-tiny-rss/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/tiny-tiny-rss/icon.png",
         "category": "RSS",
-        "stackFileUrl": "https://store.ethibox.io/packages/tiny-tiny-rss-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/tiny-tiny-rss-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Cocorico",
-        "icon": "https://store.ethibox.io/charts/cocorico/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/cocorico/icon.png",
         "category": "Marketplace",
-        "stackFileUrl": "https://store.ethibox.io/packages/cocorico-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/cocorico-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Magento",
-        "icon": "https://store.ethibox.io/charts/magento/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/magento/icon.png",
         "category": "E-Commerce",
-        "stackFileUrl": "https://store.ethibox.io/packages/magento-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/magento-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Gitlab",
-        "icon": "https://store.ethibox.io/charts/gitlab/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/gitlab/icon.png",
         "category": "Git",
-        "stackFileUrl": "https://store.ethibox.io/packages/gitlab-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/gitlab-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Riot.im",
-        "icon": "https://store.ethibox.io/charts/riot/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/riot/icon.png",
         "category": "Chat",
-        "stackFileUrl": "https://store.ethibox.io/packages/riot-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/riot-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Zammad",
-        "icon": "https://store.ethibox.io/charts/zammad/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/zammad/icon.png",
         "category": "Helpdesk",
-        "stackFileUrl": "https://store.ethibox.io/packages/zammad-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/zammad-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Humhub",
-        "icon": "https://store.ethibox.io/charts/humhub/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/humhub/icon.png",
         "category": "Social network",
-        "stackFileUrl": "https://store.ethibox.io/packages/humhub-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/humhub-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Diaspora",
-        "icon": "https://store.ethibox.io/charts/diaspora/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/diaspora/icon.png",
         "category": "Social network",
-        "stackFileUrl": "https://store.ethibox.io/packages/diaspora-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/diaspora-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Roundcube",
-        "icon": "https://store.ethibox.io/charts/roundcube/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/roundcube/icon.png",
         "category": "Email",
-        "stackFileUrl": "https://store.ethibox.io/packages/roundcube-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/roundcube-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "PeerTube",
-        "icon": "https://store.ethibox.io/charts/peertube/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/peertube/icon.png",
         "category": "Streaming",
-        "stackFileUrl": "https://store.ethibox.io/packages/peertube-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/peertube-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Zabbix",
-        "icon": "https://store.ethibox.io/charts/zabbix/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/zabbix/icon.png",
         "category": "Monitoring",
-        "stackFileUrl": "https://store.ethibox.io/packages/zabbix-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/zabbix-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Grafana",
-        "icon": "https://store.ethibox.io/charts/grafana/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/grafana/icon.png",
         "category": "Monitoring",
-        "stackFileUrl": "https://store.ethibox.io/packages/grafana-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/grafana-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Contao",
-        "icon": "https://store.ethibox.io/charts/contao/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/contao/icon.png",
         "category": "CMS",
-        "stackFileUrl": "https://store.ethibox.io/packages/contao-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/contao-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "OnlyOffice",
-        "icon": "https://store.ethibox.io/charts/onlyoffice/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/onlyoffice/icon.png",
         "category": "Editor",
-        "stackFileUrl": "https://store.ethibox.io/packages/onlyoffice-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/onlyoffice-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Joomla",
-        "icon": "https://store.ethibox.io/charts/joomla/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/joomla/icon.png",
         "category": "CMS",
-        "stackFileUrl": "https://store.ethibox.io/packages/joomla-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/joomla-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Cozy",
-        "icon": "https://store.ethibox.io/charts/cozy/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/cozy/icon.png",
         "category": "Storage",
-        "stackFileUrl": "https://store.ethibox.io/packages/cozy-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/cozy-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Sentry",
-        "icon": "https://store.ethibox.io/charts/sentry/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/sentry/icon.png",
         "category": "Error-tracking",
-        "stackFileUrl": "https://store.ethibox.io/packages/sentry-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/sentry-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     },
     {
         "name": "Taiga",
-        "icon": "https://store.ethibox.io/charts/taiga/icon.png",
+        "icon": "https://store.ethibox.io/kubernetes/charts/taiga/icon.png",
         "category": "Project-Management",
-        "stackFileUrl": "https://store.ethibox.io/packages/taiga-0.1.0.tgz",
+        "stackFileUrl": "https://store.ethibox.io/kubernetes/packages/taiga-0.1.0.tgz",
         "orchestrator": "kubernetes",
         "enabled": "false"
     }
