@@ -2,11 +2,15 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ template "invoiceninja.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     app: {{ template "invoiceninja.name" . }}
     chart: {{ template "invoiceninja.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
+    {{ if and .Values.ingress.enabled .Values.ingress.hosts }}
+    domain: {{ index .Values.ingress.hosts 0 }}
+    {{ end }}
 spec:
   type: {{ .Values.service.type }}
   ports:

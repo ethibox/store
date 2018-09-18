@@ -1,32 +1,31 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: {{ template "mariadb.fullname" . }}
   labels:
     app: {{ template "mariadb.name" . }}
-    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    chart: {{ template "mariadb.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "mariadb.name" . }}
+      release: {{ .Release.Name }}
   template:
     metadata:
       labels:
         app: {{ template "mariadb.name" . }}
         release: {{ .Release.Name }}
+      annotations:
+        backup.ark.heptio.com/backup-volumes: mariadb-data
     spec:
-      {{ if .Values.persistence.enabled }}
+      {{- if .Values.persistence.enabled }}
       volumes:
-        {{ if .Values.persistence.existingClaim }}
-        - name: mariadb-storage
+        - name: mariadb-data
           persistentVolumeClaim:
-            claimName: {{ .Values.persistence.existingClaim }}
-        {{ else }}
-        - name: mariadb-storage
-          hostPath:
-            path: {{ .Values.persistence.directory }}/{{ .Release.Name }}/{{ template "mariadb.fullname" . }}
-            type: DirectoryOrCreate
-        {{ end }}
+            claimName: {{ .Values.persistence.existingClaim | default (include "mariadb.fullname" .) }}
       {{ end }}
       containers:
         - name: {{ .Chart.Name }}
@@ -41,11 +40,13 @@ spec:
                   name: {{ template "mariadb.fullname" . }}
                   key: mariadb-root-password
           ports:
-            - containerPort: {{ .Values.service.internalPort }}
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP
           {{- if .Values.persistence.enabled }}
           volumeMounts:
-            - name: mariadb-storage
-              mountPath: "/var/lib/mysql"
+            - name: mariadb-data
+              mountPath: /var/lib/mysql
           {{ end }}
           livenessProbe:
             exec:
@@ -59,7 +60,15 @@ spec:
             timeoutSeconds: 1
           resources:
 {{ toYaml .Values.resources | indent 12 }}
-    {{- if .Values.nodeSelector }}
+    {{- with .Values.nodeSelector }}
       nodeSelector:
-{{ toYaml .Values.nodeSelector | indent 8 }}
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
     {{- end }}

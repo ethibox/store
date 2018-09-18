@@ -16,23 +16,11 @@ spec:
       name: {{ template "mariadb.fullname" . }}
     spec:
       restartPolicy: Never
-      volumes:
-        - name: mariadb-storage
-          hostPath:
-            path: {{ .Values.persistence.directory }}
-            type: DirectoryOrCreate
       containers:
         - name: delete-config
           image: lachlanevenson/k8s-kubectl:v1.9.8
           imagePullPolicy: Always
           command: ["kubectl", "delete", "secret", {{ template "mariadb.fullname" . }}]
-          lifecycle:
-            postStart:
-              exec:
-                command: ["rm", "-rf", {{ printf "/tmp/%s" .Release.Name | quote }}]
-          volumeMounts:
-            - name: mariadb-storage
-              mountPath: "/tmp"
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
