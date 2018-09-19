@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: ethibox/ethibox
-  tag: 0.10.1
+  tag: 0.11.0
 
 service:
   type: ClusterIP
