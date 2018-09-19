@@ -21,7 +21,7 @@ spec:
       annotations:
         backup.ark.heptio.com/backup-volumes: mariadb-data
     spec:
-      {{- if .Values.persistence.enabled }}
+      {{- if .Values.global.persistence.enabled }}
       volumes:
         - name: mariadb-data
           persistentVolumeClaim:
@@ -43,7 +43,7 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
-          {{- if .Values.persistence.enabled }}
+          {{- if .Values.global.persistence.enabled }}
           volumeMounts:
             - name: mariadb-data
               mountPath: /var/lib/mysql

@@ -9,7 +9,6 @@ service:
   port: 3306
 
 persistence:
-  enabled: false
   accessMode: ReadWriteOnce
   size: 2Gi
   existingClaim: ""

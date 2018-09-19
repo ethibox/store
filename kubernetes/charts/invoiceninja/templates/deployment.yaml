@@ -27,25 +27,11 @@ spec:
             name: {{ template "invoiceninja.fullname" . }}
         - name: invoiceninja-public
           emptyDir: {}
-        {{- if .Values.persistence.enabled }}
-        - name: invoiceninja-data
-          persistentVolumeClaim:
-            claimName: {{ .Values.persistence.existingClaim | default (include "invoiceninja.fullname" .) }}
+        {{- if .Values.global.persistence.enabled }}
         - name: invoiceninja-data
           persistentVolumeClaim:
             claimName: {{ .Values.persistence.existingClaim | default (include "invoiceninja.fullname" .) }}
         {{ end }}
-      {{ if and .Values.persistence.enabled .Release.IsInstall }}
-      initContainers:
-        - name: volume-mount-hack
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          command: ["sh", "-c", "chown -R www-data:www-data /var/www/app/storage"]
-          volumeMounts:
-            - name: invoiceninja-data
-              mountPath: /var/www/app/storage
-              securityContext:
-                runAsUser: 0
-      {{ end }}
       containers:
         - name: nginx
           image: nginx:1
@@ -69,7 +55,7 @@ spec:
           volumeMounts:
             - name: invoiceninja-public
               mountPath: /var/www/app/public
-            {{- if .Values.persistence.enabled }}
+            {{- if .Values.global.persistence.enabled }}
             - name: invoiceninja-data
               mountPath: /var/www/app/storage
               subPath: storage

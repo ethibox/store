@@ -14,8 +14,11 @@ ingress:
     - invoiceninja.local
 
 persistence:
-  enabled: false
   accessMode: ReadWriteOnce
   size: 2Gi
   existingClaim: ""
   storageClassName: ""
+
+global:
+  persistence:
+    enabled: false
