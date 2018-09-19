@@ -1,12 +1,15 @@
----
 replicaCount: 1
+
 image:
   repository: mariadb
-  tag: 10.3.3
+  tag: 10.3.9
+
 service:
   type: ClusterIP
-  internalPort: 3306
-  externalPort: 3306
+  port: 3306
+
 persistence:
-  enabled: true
-  directory: /data/helm
+  accessMode: ReadWriteOnce
+  size: 2Gi
+  existingClaim: ""
+  storageClassName: ""

@@ -1,13 +1,24 @@
----
 replicaCount: 1
+
 image:
   repository: invoiceninja/invoiceninja
-  tag: 4.4.3
+  tag: 4.5.4
+
 service:
-  type: NodePort
+  type: ClusterIP
   port: 80
+
 ingress:
   enabled: false
+  hosts:
+    - invoiceninja.local
+
 persistence:
-  enabled: true
-  directory: /data/helm
+  accessMode: ReadWriteOnce
+  size: 2Gi
+  existingClaim: ""
+  storageClassName: ""
+
+global:
+  persistence:
+    enabled: false

@@ -18,34 +18,20 @@ spec:
       labels:
         app: {{ template "invoiceninja.name" . }}
         release: {{ .Release.Name }}
+      annotations:
+        backup.ark.heptio.com/backup-volumes: invoiceninja-data
     spec:
       volumes:
         - name: config
           configMap:
             name: {{ template "invoiceninja.fullname" . }}
-        - name: public
+        - name: invoiceninja-public
           emptyDir: {}
-      {{ if .Values.persistence.existingClaim }}
-        - name: invoiceninja-storage
+        {{- if .Values.global.persistence.enabled }}
+        - name: invoiceninja-data
           persistentVolumeClaim:
-            claimName: {{ .Values.persistence.existingClaim }}
-      {{- else }}
-        - name: invoiceninja-storage
-          hostPath:
-            path: {{ .Values.persistence.directory }}/{{ .Release.Name }}/{{ template "invoiceninja.fullname" . }}
-            type: DirectoryOrCreate
-      {{ end }}
-      {{ if .Release.IsInstall }}
-      initContainers:
-        - name: volume-mount-hack
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          command: ["sh", "-c", "chown -R www-data:www-data /var/www/app/storage"]
-          volumeMounts:
-            - name: invoiceninja-storage
-              mountPath: /var/www/app/storage
-              securityContext:
-                runAsUser: 0
-      {{ end }}
+            claimName: {{ .Values.persistence.existingClaim | default (include "invoiceninja.fullname" .) }}
+        {{ end }}
       containers:
         - name: nginx
           image: nginx:1
@@ -53,18 +39,27 @@ spec:
             - name: config
               mountPath: /etc/nginx/nginx.conf
               subPath: nginx.conf
-            - name: public
+            - name: invoiceninja-public
               mountPath: /var/www/app/public
           ports:
             - name: http
               containerPort: 80
               protocol: TCP
         - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP
           volumeMounts:
-            - name: public
+            - name: invoiceninja-public
               mountPath: /var/www/app/public
-            - name: invoiceninja-storage
+            {{- if .Values.global.persistence.enabled }}
+            - name: invoiceninja-data
               mountPath: /var/www/app/storage
+              subPath: storage
+            {{ end }}
           env:
             - name: APP_CIPHER
               value: AES-256-CBC
@@ -76,7 +71,7 @@ spec:
             - name: APP_URL
               value: https://{{ index .Values.ingress.hosts 0 }}
             - name: REQUIRE_HTTPS
-              value: "true"
+              value: "false"
           {{- else }}
             - name: APP_URL
               value: http://localhost
@@ -94,12 +89,6 @@ spec:
               value: "true"
             - name: DB_USERNAME
               value: root
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
-          ports:
-            - name: http
-              containerPort: 9000
-              protocol: TCP
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}

@@ -19,3 +19,8 @@
 .project
 .idea/
 *.tmproj
+# Custom
+README.md
+LICENSE.txt
+makefile
+.travis.yml
